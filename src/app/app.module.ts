@@ -8,6 +8,7 @@ import {HeaderComponent} from './header/header.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { TextBlockComponent } from './text-block/text-block.component';
+import { ContactsComponent } from './contacts/contacts.component';
 
 
 
@@ -22,7 +23,8 @@ import { TextBlockComponent } from './text-block/text-block.component';
     HeaderComponent,
     ScheduleComponent,
     PresentationComponent,
-    TextBlockComponent
+    TextBlockComponent,
+    ContactsComponent
   ],
   bootstrap: [ AppComponent ]
 })
