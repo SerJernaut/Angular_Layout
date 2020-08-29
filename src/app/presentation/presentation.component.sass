@@ -1,0 +1,54 @@
+.presentation-container
+  position: relative
+  p
+    font-size: 26px
+    line-height: 31px
+    color: #A2A2A2
+    position: absolute
+    top: 22%
+    left: 5%
+    z-index: 1
+    opacity: 0.8
+    @media screen and (min-width: 576px)
+      font-size: 24px
+      line-height: 29px
+      color: #FFFFFF
+      left: 15%
+
+  img
+    position: relative
+  h1
+    position: absolute
+    top: 10%
+    left: 5%
+    z-index: 1
+    color: white
+    @media screen and (max-width: 576px)
+      font-size: 26px
+      line-height: 31px
+      left: 15%
+
+.show-video-container
+  cursor: pointer
+  background: #FFFFFF
+  padding: 43px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  border-radius: 30px
+
+.show-video
+  width: 0
+  height: 0
+  border-top: 15px solid transparent
+  border-left: 30px solid black
+  border-bottom: 15px solid transparent
+
+.img-mobile
+  @media screen and (min-width: 576px)
+    display: none
+
+.img-desktop
+  @media screen and (max-width: 576px)
+    display: none
