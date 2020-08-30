@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentationComponent implements OnInit {
 
+  isShowVideo = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showVideo () {
+    this.isShowVideo = !this.isShowVideo
+  }
 }

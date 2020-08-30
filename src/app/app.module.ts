@@ -11,6 +11,8 @@ import { TextBlockComponent } from './text-block/text-block.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { VideoComponent } from './video/video.component';
 
 
 
@@ -18,7 +20,8 @@ import { MainPageComponent } from './main-page/main-page.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    YouTubePlayerModule
   ],
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { MainPageComponent } from './main-page/main-page.component';
     TextBlockComponent,
     ContactsComponent,
     FooterComponent,
-    MainPageComponent
+    MainPageComponent,
+    VideoComponent
   ],
   bootstrap: [ AppComponent ]
 })
