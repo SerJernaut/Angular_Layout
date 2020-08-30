@@ -15,4 +15,9 @@ export class HeaderComponent implements OnInit {
   goToLink(url: string){
     window.open("//" + url, '_blank');
   }
+
+  scroll(id: string) {
+    let el = document.getElementById(id);
+    el.scrollIntoView({behavior: 'smooth'});
+  }
 }
