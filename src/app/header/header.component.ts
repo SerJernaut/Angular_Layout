@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HeaderService} from '../header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerService: HeaderService) {}
 
   ngOnInit(): void {
   }
 
-  goToLink(url: string){
-    window.open("//" + url, '_blank');
+  goToLink(url: string) {
+    this.headerService.goToLink(url);
   }
 
-  scroll(id: string) {
-    let el = document.getElementById(id);
-    el.scrollIntoView({behavior: 'smooth'});
+  scroll(id: string){
+    this.headerService.scroll(id);
   }
+
 }
