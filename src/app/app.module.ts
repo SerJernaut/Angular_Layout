@@ -10,6 +10,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { TextBlockComponent } from './text-block/text-block.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 
 
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     PresentationComponent,
     TextBlockComponent,
     ContactsComponent,
-    FooterComponent
+    FooterComponent,
+    MainPageComponent
   ],
   bootstrap: [ AppComponent ]
 })
