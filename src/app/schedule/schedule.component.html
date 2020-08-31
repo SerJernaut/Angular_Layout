@@ -1,33 +1,13 @@
 <section class="container">
   <div class="row pt-2 pb-2">
-    <div class="col-12 col-md-4 d-flex flex-column p-5">
-      <span class="number">01</span>
-      <h2>Старт</h2>
-      <p class="description">Ліквідація ДАБІ Створення сервісної служби</p>
-    </div>
-    <div class="col-12 col-md-4 d-flex flex-column p-5">
-      <span class="number">02</span>
-      <h2>Березень — Травень 2020</h2>
-      <p class="description">Перехідний період
-        Мораторій на інспекційний держконтроль</p>
-    </div>
-    <div class="col-12 col-md-4 d-flex flex-column p-5">
-      <span class="number">03</span>
-      <h2>Червень 2020</h2>
-      <p class="description">Створення ДІМ
-
-        Запуск нового реєстру</p>
-    </div>
-    <div class="col-12 col-md-4 d-flex flex-column p-5">
-      <span class="number">04</span>
-      <h2>Вересень 2020</h2>
-      <p class="description">Державне агентство з питань технічного регулювання у містобудуванні</p>
-    </div>
-    <div class="col-12 col-md-4 d-flex flex-column p-5">
-      <span class="number">05</span>
-      <h2 class="d-none d-md-inline">Січень 2021</h2>
-      <h2 class="d-md-none">Портал</h2>
-      <p class="description">Запровадження страхування</p>
+    <div *ngFor="let info of scheduleInfo" class="col-12 col-md-4 d-flex flex-column p-5">
+      <span class="number">{{info.number}}</span>
+      <h2 [ngClass]="{'d-none': 'info.mobileHeader', 'd-md-block': 'info.mobileHeader'}"
+      >{{info.header}}</h2>
+      <h2 [class.d-md-none]="info.mobileHeader">
+        {{info.mobileHeader}}
+      </h2>
+      <p class="description">{{info.description}}</p>
     </div>
   </div>
 </section>
