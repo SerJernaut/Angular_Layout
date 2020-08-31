@@ -1,51 +1,18 @@
 <section class="container-fluid pt-4 pb-4">
-  <div class="row d-flex justify-content-center">
+  <div *ngFor="let contact of contactsInfo; let last = last" class="row d-flex justify-content-center">
     <div class="col-lg-10 col-12">
       <div class="container">
-        <div class="row contact-container p-5">
-          <img class="col-lg-1 emblem" src="assets/images/fist.svg" alt="fist">
-          <h2 class="col-lg-3 col-12">Зіткнулися з корупцією?</h2>
+        <div class="row p-5 contact-info-container"  [ngClass]="{'border-bottom-0': last}">
+          <img class="col-lg-1 emblem" src="{{contact.image}}" alt="fist">
+          <h2 class="col-lg-3 col-12">{{contact.header}}</h2>
           <div class="col-lg-4 offset-lg-4">
-            <span class="d-md-inline d-none">Пишіть нам</span>
-            <p class="mt-2">hello@thedigital.gov.ua</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-lg-10 col-12">
-      <div class="container">
-        <div class="row contact-container p-5">
-          <img class="col-lg-1  emblem" src="assets/images/msg.svg" alt="message">
-          <h2 class="col-lg-3 col-12">Напишіть у чат-бот</h2>
-          <div class="col-lg-4 offset-lg-4">
-            <span class="d-md-inline d-none">Оберіть месенджер</span>
-            <div class="d-flex">
-              <div class="square">
-                <img src="assets/images/viber.svg" alt="viber">
-              </div>
-              <div class="square">
-                <img src="assets/images/telegram.svg" alt="telegram">
-              </div>
-              <div class="square">
-                <img src="assets/images/facebook.svg" alt="facebook">
+            <span class="d-md-inline d-none">{{contact.description}}</span>
+            <p *ngIf="contact.contact" class="mt-2">{{contact.contact}}</p>
+            <div *ngIf="contact.socialNetworksInfo" class="d-flex">
+              <div *ngFor="let socialNetwork of contact.socialNetworksInfo" class="square">
+                <img src="{{socialNetwork.src}}" alt="{{socialNetwork.name}}">
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row d-flex justify-content-center">
-    <div class="col-lg-10 col-12">
-      <div class="container">
-        <div class="row p-5">
-          <img class="col-lg-1 emblem" src="assets/images/phone.svg" alt="fist">
-          <h2 class="col-lg-3 col-12">Зателефонуйте на гарячу лінію</h2>
-          <div class="col-lg-4 offset-lg-4">
-            <span class="d-md-inline d-none">Працює з 09:00 до 18:00</span>
-            <p class="mt-2">+38 097 162 85 29</p>
           </div>
         </div>
       </div>
