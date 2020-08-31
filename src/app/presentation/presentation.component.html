@@ -3,11 +3,11 @@
     <h1>Презентація наживо</h1>
     <p>11 березня, о 12:00</p>
     <img src="assets/images/presentation.svg" class="img-fluid w-100 img-desktop" alt="presentation">
-    <img src="assets/images/presentation-mobile.svg" class="img-fluid w-100 img-mobile" alt="presentation">
+    <img src="assets/images/presentation-mobile.jpg" class="img-fluid w-100 img-mobile" alt="presentation">
     <button class="show-video-container" *ngIf="!isShowVideo" (click)=showVideo()>
       <div class="show-video"></div>
     </button>
-    <div class="video-container">
+    <div class="video-container mt-md-0 mt-4">
       <app-video *ngIf="isShowVideo"></app-video>
     </div>
   </div>
