@@ -2,9 +2,9 @@
   <div class="row pt-2 pb-2">
     <div *ngFor="let info of scheduleInfo" class="col-12 col-md-4 d-flex flex-column p-5">
       <span class="number">{{info.number}}</span>
-      <h2 [ngClass]="{'d-none': 'info.mobileHeader', 'd-md-block': 'info.mobileHeader'}"
+      <h2 [ngClass]="{'d-none d-md-block': info.mobileHeader}"
       >{{info.header}}</h2>
-      <h2 [class.d-md-none]="info.mobileHeader">
+      <h2 *ngIf="info.mobileHeader" [class.d-md-none]="info.mobileHeader">
         {{info.mobileHeader}}
       </h2>
       <p class="description">{{info.description}}</p>
