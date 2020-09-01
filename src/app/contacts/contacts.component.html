@@ -2,10 +2,10 @@
   <div *ngFor="let contact of contactsInfo; let last = last" class="row d-flex justify-content-center">
     <div class="col-lg-10 col-12">
       <div class="container">
-        <div class="row p-5 contact-info-container"  [ngClass]="{'border-bottom-0': last}">
+        <div class="row pt-5 pb-5 pl-2 pr-2 contact-info-container"  [ngClass]="{'border-bottom-0': last}">
           <img class="col-lg-1 emblem" src="{{contact.image}}" alt="fist">
-          <h2 class="col-lg-3 col-12">{{contact.header}}</h2>
-          <div class="col-lg-4 offset-lg-4">
+          <h2 class="col-lg-5 col-12">{{contact.header}}</h2>
+          <div class="col-lg-4 col-12 offset-lg-1">
             <span class="d-md-inline d-none">{{contact.description}}</span>
             <p *ngIf="contact.contact" class="mt-2">{{contact.contact}}</p>
             <div *ngIf="contact.socialNetworksInfo" class="d-flex">
