@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -13,6 +13,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoComponent } from './video/video.component';
+import {NewsComponent} from './news/news.component';
+import {NewsFormComponent} from './news-form/news-form.component';
+import {ModalModule} from 'angular-custom-modal';
 
 
 
@@ -21,7 +24,9 @@ import { VideoComponent } from './video/video.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    ReactiveFormsModule,
+    ModalModule
   ],
   declarations: [
     AppComponent,
@@ -32,7 +37,9 @@ import { VideoComponent } from './video/video.component';
     ContactsComponent,
     FooterComponent,
     MainPageComponent,
-    VideoComponent
+    VideoComponent,
+    NewsComponent,
+    NewsFormComponent,
   ],
   bootstrap: [ AppComponent ]
 })

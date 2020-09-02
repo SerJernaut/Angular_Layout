@@ -1,0 +1,46 @@
+input.ng-dirty.ng-invalid, input.ng-touched.ng-invalid
+  border-bottom: solid red 2px
+
+input.ng-dirty.ng-valid, input.ng-touched.ng-valid
+  border-bottom: solid green 2px
+
+input[name="email"]
+  font-size: 18px
+  line-height: 22px
+  width: 100%
+  border: none
+  border-bottom: solid black 2px
+  background: transparent
+  &:focus
+    outline: none
+
+.msg
+  width: 294px
+
+.submit-btn
+  cursor: pointer
+  border-radius: 40px
+  background: black
+  color: white
+  font-size: 16px
+  line-height: 24px
+  padding: 19px 84.5px
+
+.ok-btn
+  border-radius: 40px
+  background: black
+  color: white
+  padding: 19px 78.5px
+  font-size: 13px
+  line-height: 24px
+  @media screen and (min-width: 576px)
+    font-size: 16px
+    line-height: 24px
+
+.module-msg
+  font-size: 13px
+  line-height: 17px
+  @media screen and (min-width: 576px)
+    font-size: 20px
+    line-height: 32px
+

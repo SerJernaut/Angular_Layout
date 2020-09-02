@@ -1,0 +1,23 @@
+<form [formGroup]="newsForm" (ngSubmit)="submit(htmlInsideModal)" autocomplete="off">
+  <div class="d-flex flex-column justify-content-between mb-3">
+    <input name="email" formControlName="email" [placeholder]="'Ваш email'" required/>
+    <div *ngIf="email.invalid && (email.touched || email.dirty)" class="mt-3 msg">
+        <div *ngIf="email.errors?.required" class="alert alert-danger">To get news you need to enter email</div>
+        <div *ngIf="email.errors?.email" class="alert alert-danger">Please provide a valid email address</div>
+    </div>
+  </div>
+  <button class="submit-btn d-flex align-items-center text-center" [disabled]="!email.errors?.required && newsForm.invalid">
+    Підписатись
+  </button>
+  <modal #htmlInsideModal>
+    <ng-template #modalHeader><h1 class="modal-h1">Дякуємо</h1></ng-template>
+    <ng-template #modalBody>
+      <div class="row">
+        <p class="d-sm-block d-none col-10 module-msg">Ми відправили лист на вашу пошту. Будь ласка, підтвердіть підписку.</p>
+      </div>
+      <p class="d-sm-none d-block">Зовсім скоро повідомимо
+        про початок тестування.</p>
+      <button class="ok-btn" (click)="htmlInsideModal.close()">Ок</button>
+    </ng-template>
+  </modal>
+</form>

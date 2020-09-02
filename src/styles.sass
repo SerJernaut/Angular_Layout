@@ -7,6 +7,12 @@ h1
   text-align: center
   font-family: e-Ukraine Regular
 
+h1.modal-h1
+  line-height: 56px
+  @media screen and (max-width: 576px)
+    line-height: 26px
+    font-size: 26px
+
 h2
   color: black
   font-size: 36px
@@ -25,6 +31,8 @@ body, input[type="text"], button
 button
   background: transparent
   border: none
+  &:focus
+    outline: 0 !important
 
 /* everywhere else */
 *
