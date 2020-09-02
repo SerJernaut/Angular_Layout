@@ -12,7 +12,6 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { VideoComponent } from './video/video.component';
 import {NewsComponent} from './news/news.component';
 import {NewsFormComponent} from './news-form/news-form.component';
 import {ModalModule} from 'angular-custom-modal';
@@ -37,7 +36,6 @@ import {ModalModule} from 'angular-custom-modal';
     ContactsComponent,
     FooterComponent,
     MainPageComponent,
-    VideoComponent,
     NewsComponent,
     NewsFormComponent,
   ],

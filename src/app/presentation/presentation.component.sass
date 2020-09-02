@@ -36,12 +36,12 @@
   top: 50%
 
 .video-container, .show-video-container
-  position: absolute
   left: 50%
+  position: absolute
   transform: translate(-50%, -50%)
 
 .video-container
-  top: 55%
+  top: 45%
 
 .show-video
   width: 0
@@ -57,3 +57,11 @@
 .img-desktop
   @media screen and (max-width: 576px)
     display: none
+
+.video-container
+  iframe
+    width: 300px
+    height: 225px
+    @media screen and (min-width: 768px)
+      width: 450px
+      height: 337px
